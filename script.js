@@ -21,38 +21,47 @@ function renderPokeCardData(data){
     cardPokemon.innerHTML = `
         <h3 class="card_name">${data.name}</h3>
         <img class="card_image" src="${data.sprites.other["official-artwork"].front_default}">
-        <div class="container_moves">
-            <p class="moves_item">${data.moves[getRandomInt(data.moves.length)].move.name}</p>
-            <p class="moves_item">${data.moves[getRandomInt(data.moves.length)].move.name}</p>
-            <p class="moves_item">${data.moves[getRandomInt(data.moves.length)].move.name}</p>
-            <p class="moves_item">${data.moves[getRandomInt(data.moves.length)].move.name}</p>
+        <div class="card_information">
+            <div class="information_item">
+                <h4 class="information_title">Movements</h4>
+                <div class="container_moves">
+                    <p class="moves_item">${data.moves[getRandomInt(data.moves.length)].move.name}</p>
+                    <p class="moves_item">${data.moves[getRandomInt(data.moves.length)].move.name}</p>
+                    <p class="moves_item">${data.moves[getRandomInt(data.moves.length)].move.name}</p>
+                    <p class="moves_item">${data.moves[getRandomInt(data.moves.length)].move.name}</p>
+                </div>
+            </div>
+            <div>
+                <h4 class="information_title">Stats</h4>
+                <div class="container_stats">
+                    <div class="container_item">
+                        <p class="item_value">${data.stats[0].base_stat}</p>
+                        <p class="item_value">${data.stats[0].stat.name}</p>
+                    </div>
+                    <div class="container_item">
+                        <p class="item_value">${data.stats[1].base_stat}</p>
+                        <p class="item_value">${data.stats[1].stat.name}</p>
+                    </div>
+                    <div class="container_item">
+                        <p class="item_value">${data.stats[2].base_stat}</p>
+                        <p class="item_value">${data.stats[2].stat.name}</p>
+                    </div>
+                    <div class="container_item">
+                        <p class="item_value">${data.stats[3].base_stat}</p>
+                        <p class="item_value">${data.stats[3].stat.name}</p>
+                    </div>
+                    <div class="container_item">
+                        <p class="item_value">${data.stats[4].base_stat}</p>
+                        <p class="item_value">${data.stats[4].stat.name}</p>
+                    </div>
+                    <div class="container_item">
+                        <p class="item_value">${data.stats[5].base_stat}</p>
+                        <p class="item_value">${data.stats[5].stat.name}</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="container_stats">
-            <div="container_item">
-                <p class="item_value">${data.stats[0].base_stat}</p>
-                <p class="item_value">${data.stats[0].stat.name}</p>
-            </div>
-            <div="container_item">
-                <p class="item_value">${data.stats[1].base_stat}</p>
-                <p class="item_value">${data.stats[1].stat.name}</p>
-            </div>
-            <div="container_item">
-                <p class="item_value">${data.stats[2].base_stat}</p>
-                <p class="item_value">${data.stats[2].stat.name}</p>
-            </div>
-            <div="container_item">
-                <p class="item_value">${data.stats[3].base_stat}</p>
-                <p class="item_value">${data.stats[3].stat.name}</p>
-            </div>
-            <div="container_item">
-                <p class="item_value">${data.stats[4].base_stat}</p>
-                <p class="item_value">${data.stats[4].stat.name}</p>
-            </div>
-            <div="container_item">
-                <p class="item_value">${data.stats[5].base_stat}</p>
-                <p class="item_value">${data.stats[5].stat.name}</p>
-            </div>
-        </div>
+        
     `
     containerPokemons.appendChild(cardPokemon);
 }
